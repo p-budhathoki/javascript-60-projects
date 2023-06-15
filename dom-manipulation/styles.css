@@ -60,3 +60,26 @@ img {
 }
 
 /* ======================================================================= */
+span {
+    display: block;
+    padding: 2rem;
+    border: 2px solid rgba(255, 255, 255, .25);
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    /* text-align: center; */
+}
