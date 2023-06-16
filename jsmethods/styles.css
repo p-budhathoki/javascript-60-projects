@@ -60,3 +60,24 @@ img {
 }
 
 /* ======================================================================= */
+
+.change-bg{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vertical-align:middle; */
+
+}
+button {
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: 1px solid whitesmoke;
+    background: lightgreen;
+}
+
+button:hover {
+    /* border: 1px solid #000; */
+    opacity: 0.6;
+}
