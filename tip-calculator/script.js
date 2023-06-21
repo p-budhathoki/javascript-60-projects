@@ -13,19 +13,6 @@ button.addEventListener("click", () => {
   output.innerHTML = msg;
 });
 
-// joke result div
-// const jokeDiv = document.createElement("div");
-// jokeDiv.textContent = "Joke Result";
-// jokeDiv.setAttribute("class", "joke-result");
-// document.body.appendChild(jokeDiv);
-// jokeDiv.style.fontSize = "3rem";
-
-// Greetings Message
-// const nameDiv = document.createElement("div");
-// nameDiv.textContent = "Your Name";
-// nameDiv.setAttribute("class", "input-name");
-// nameDiv.style.classList.add("input-name");
-
 const msgBtn = document.querySelector(".msg");
 const outputBtn = document.querySelector(".output-msg");
 const nameInput = document.querySelector(".input-name");
@@ -33,3 +20,38 @@ const nameInput = document.querySelector(".input-name");
 msgBtn.addEventListener("click", () => {
   outputBtn.innerHTML = `<h1>Hi ${nameInput.value}</h1>`;
 });
+
+// Greetings By Time of the day
+const div = document.createElement("div");
+div.setAttribute("class", ".greet-msg");
+div.textContent = "This is the Output";
+div.style.cssText =
+  "font-size:2rem; font-weight:700; border:1px solid green; padding:1rem";
+document.body.appendChild(div);
+
+const msgButton = document.createElement("button");
+// msgBtn.setAttribute("class", ".tip-calc");
+msgBtn.classList.add(".tip-calc", ".greet-msg");
+msgBtn.textContent = "Greetings";
+document.body.appendChild(msgBtn);
+
+const greetBtn = document.querySelector(".greet-msg");
+console.log(greetBtn);
+greetBtn.addEventListener("click", showOutput);
+
+function showOutput() {
+  const date = new Date();
+  let currentHrs = date.getHours();
+  let message;
+
+  if (currentHrs > 17) {
+    message = "Its Evening";
+  } else if (currentHrs > 12) {
+    message = "Its Afternoon";
+  } else if (currentHrs > 0) {
+    message = "Its Morning";
+  } else {
+    message = "Something went wrong";
+  }
+  div.innerHTML = `<h1>${message}</h1>`;
+}
