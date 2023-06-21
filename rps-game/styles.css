@@ -60,3 +60,54 @@ img {
 }
 
 /* ======================================================================= */
+p {
+    font-size: 2rem;
+    /* border: 1px solid red; */
+    margin: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.btns {
+    display: flex;
+    /* outline: none; */
+    /* border: none; */
+    /* margin: 3rem; */
+    margin: 1rem auto;
+    /* border: 1px solid red; */
+    /* padding: 2rem; */
+    /* background: transparent; */
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 12rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2rem;
+    transition: opacity .3s;
+}
+
+.btn-paper {
+    background: darkorange;
+}
+
+.btn-rock {
+    background: deepskyblue;
+}
+
+.btn-scissors {
+    background: springgreen;
+}
+
+.btn-rock:hover, .btn-paper:hover,.btn-scissors:hover {
+    opacity: .8;
+}
