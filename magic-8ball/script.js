@@ -49,9 +49,28 @@ const btnEl = document.querySelector(".btn-ask");
 const resultEl = document.querySelector(".result");
 const keyEnter = 13;
 
-btnEl.addEventListener("click", (e) => {
-  
-    console.log(question.value);
+// btnEl.addEventListener("click", (e) => {
+//   console.log(question.value);
+
+//   let result = Math.floor(Math.random() * ansArray.length);
+//   console.log(result);
+//   if (question.value !== "") {
+//     resultEl.innerText = question.value + " " + ansArray[result];
+//     question.value = "";
+//   } else {
+//     resultEl.innerText = "Please enter a question...";
+//   }
+// });
+
+// document.addEventListener("keydown", (e) => {
+  // console.log(e)
+//   e.preventDefault();
+//   console.log(e.keyCode + " ==> " + e.key);
+// });
+
+["click", "keyboard-enter"].forEach((evt) => {
+  btnEl.addEventListener(evt, () => {
+    // console.log(question.value);
 
     let result = Math.floor(Math.random() * ansArray.length);
     console.log(result);
@@ -61,5 +80,5 @@ btnEl.addEventListener("click", (e) => {
     } else {
       resultEl.innerText = "Pleae enter a question...";
     }
-  
+  });
 });
