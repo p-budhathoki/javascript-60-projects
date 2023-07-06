@@ -60,3 +60,130 @@ img {
 }
 
 /* ======================================================================= */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* padding: 0; */
+}
+
+.heading, .message {
+    /* border: 1px solid red; */
+    padding: 1rem;
+    /* display: inline-block; */
+    margin: 1rem auto;
+    background-color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    font-size: 3rem;
+}
+
+.instruction {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-size: 1.8rem;
+    /* color: #000; */
+    padding: 1rem;
+}
+
+.hide {
+    /* opacity: 1; */
+    display: none;
+}
+
+
+
+.btn {
+    padding: 1rem 3rem;
+    background: lime;
+    font-size: 2rem;
+    font-weight: 700;
+    outline: none;
+    border: .1rem solid springgreen;
+    border-radius: 0.4rem;
+    margin: 1.5rem auto;
+    /* text-align: center; */
+    /* border: 1px solid orange; */
+    display: block;
+    width: 20rem;
+    color: #000;
+}
+
+
+.btn:hover {
+    cursor: pointer;
+    opacity: .5;
+    border-color: whitesmoke;
+}
+
+/* .btn:hover:not([enabled="enabled"]) {
+    cursor: pointer;
+    opacity: .5;
+    border-color: whitesmoke;
+} */
+
+.game-area {
+    /* padding: .5rem; */
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    font-size: 3rem;
+    margin: 1.5rem auto;
+    /* display: block; */
+    /* width: 50%;
+    height: 50%; */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 2rem;
+}
+
+.box {
+    width: 50%;
+    height: 50%;
+    color: whitesmoke;
+    text-align: center;
+    display: inline-block;
+    /* padding: 2re
+    m; */
+    /* margin: 2rem; */
+    margin: 0;
+    padding: 0;
+}
+
+
+.page {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.pop {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2rem;
+    font-family: fantasy;
+}
+.active {
+    border: 1px solid limegreen;
+    /* color: red; */
+    background: mediumturquoise;
+    color: #000;
+    box-shadow: .5rem .5rem  #555;
+    cursor: pointer;
+}
+
+.row {
+    display: block;
+}
+
+.game {
+    border: 1px solid green;
+}
