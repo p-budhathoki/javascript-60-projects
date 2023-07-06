@@ -60,3 +60,95 @@ img {
 }
 
 /* ======================================================================= */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* padding: 0; */
+}
+
+.heading, .message {
+    /* border: 1px solid red; */
+    padding: 1rem;
+    /* display: inline-block; */
+    margin: 1rem auto;
+    background-color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    font-size: 3rem;
+}
+
+.btns {
+    display: flex;
+    width: 50%;
+    /* border: 1px solid #000; */
+    margin: 1rem auto;
+    /* justify-content: center; */
+}
+
+.btn {
+    padding: 1rem 3rem;
+    background: lime;
+    font-size: 2rem;
+    font-weight: 700;
+    outline: none;
+    border: .1rem solid springgreen;
+    border-radius: 0.4rem;
+    margin: 1.5rem auto;
+    /* text-align: center; */
+    /* border: 1px solid orange; */
+    display: block;
+    width: 20rem;
+    color: #000;
+}
+
+.btns .start {
+    background: navy;
+    color: whitesmoke;
+}
+
+
+
+.btn:hover {
+    cursor: pointer;
+    opacity: .5;
+    border-color: whitesmoke;
+}
+
+.hide {
+    display: none;
+}
+
+
+.gameArea {
+    position: relative;
+    /* background: paleturquoise; */
+    /* padding: .5rem; */
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    font-size: 3rem;
+    margin: 1.5rem auto;
+    /* display: block; */
+    width: 100%;
+    height: 25rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 2rem;
+}
+
+.box {
+    /* position: relative; */
+    /* width: 50%; */
+    /* height: 20rem; */
+    /* background-color: red; */
+    /* width: 10rem;
+    height: 10rem; */
+    /* top: 15rem;
+    left: 5rem; */
+
+}
