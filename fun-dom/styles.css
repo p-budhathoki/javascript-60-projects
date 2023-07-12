@@ -60,3 +60,27 @@ img {
 }
 
 /* ======================================================================= */
+.copyMe {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    position: absolute;
+    /* width: 6rem; */
+    text-align: center;
+    /* height: 4rem; */
+    cursor: pointer;
+}
+
+.newb {
+    color: red;
+}
+
+#garbage {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    background: #000;
+    left: 50rem;
+    top: 30rem;
+}
