@@ -60,3 +60,33 @@ img {
 }
 
 /* ======================================================================= */
+body, p {
+    font-size: 2rem;
+}
+
+.content {
+    background: #000;
+    /* border: 1px solid red; */
+    margin: 1rem auto;
+    padding: 2rem;
+
+}
+
+.tooltip {
+    background: yellowgreen;
+    color: #000;
+    cursor: pointer;
+}
+
+.output {
+    display: none;
+    padding: 1rem;
+    border-radius: 45%;
+    position: absolute;
+    /* border: 1px solid red; */
+    color: #000;
+    background: seagreen;
+    padding: 0.5rm;
+    top: 10rem;
+    left: 5rem;
+}
