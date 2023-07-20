@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PageTitle</title>
+    <title>Copy To Clipboard</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,37 @@
   </head>
 
   <body>
+    <div class="container">
+      <!-- source text -->
+      <div class="source-text">
+        <h2>Source Text :</h2>
+        <label for="copytext" class="hide"></label>
+        <textarea
+          name="copyText"
+          id="copytext"
+          cols="30"
+          rows="10"
+          placeholder="Text to Copy"></textarea>
+      </div>
+      <!-- buttons -->
+      <div class="button">
+        <div class="btn btn-mover">Move Text</div>
+        <div class="btn btn-copy">Copy Text</div>
+      </div>
+      <!-- copied text -->
+      <div class="copied-text">
+        <h2>Copied Text :</h2>
+        <label for="finaltext" class="hide"></label>
+        <textarea
+          name="finalText"
+          id="finaltext"
+          cols="30"
+          rows="10"
+          placeholder="Copied Text"></textarea>
+      </div>
+      <!-- output -->
+      <div class="output">Output</div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

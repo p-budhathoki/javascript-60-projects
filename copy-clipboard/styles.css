@@ -60,3 +60,114 @@ img {
 }
 
 /* ======================================================================= */
+.container {
+    width: 100%;
+    height: 100vh;
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding: 0; */
+    /* border: 1px solid red; */
+}
+
+.source-text, .copied-text {
+    margin: 1rem auto;
+    margin-bottom: 0;
+    width: 80%;
+    height: 30%;
+    /* border: 1px solid red; */
+    border-radius: 0.5rem .5rem 0 0;
+
+}
+
+.copied-text {
+    margin-top: 0;
+}
+
+.source-text h2, .copied-text h2 {
+    font-size: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, .25);
+}
+
+.source-text textarea, .copied-text textarea {
+    width: 100%;
+    height: 65%;
+    font-size: 1.6rem;
+    padding: 1rem;
+    /* margin: auto; */
+    resize: none;
+    color: #000;
+    background: whitesmoke;
+}
+
+.button {
+    display: flex;
+    /* justify-content: center; */
+    width: 50%;
+    /* border: 1px solid red; */
+    margin: 1rem auto;
+    margin-bottom: 0;
+    margin-top: -3rem;
+
+}
+
+.btn {
+    padding: 1rem 3rem;
+    background: lime;
+    font-size: 2rem;
+    font-weight: 700;
+    outline: none;
+    border: .1rem solid springgreen;
+    border-radius: 0.4rem;
+    margin: 1.5rem auto;
+    display: block;
+    width: 20rem;
+    color: #000;
+    text-align: center;
+}
+
+/* .btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+} */
+
+.btn-mover {
+    background: khaki;
+}
+
+.btn-copy {
+    background: deeppink;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: .5;
+    border-color: whitesmoke;
+}
+
+.btn:hover:not([enabled="enabled"]) {
+    cursor: pointer;
+    opacity: .5;
+    border-color: whitesmoke;
+}
+
+.hide {
+    display: none;
+}
+
+.output {
+    width: 80%;
+    height: 25%;
+    /* border: 1px solid red; */
+    background: rgba(255, 255, 255, .25);
+    font-size: 1.6rem;
+    padding: 1rem;
+    color: #000;
+    border-radius: .5rem .5rem 0 0;
+}
