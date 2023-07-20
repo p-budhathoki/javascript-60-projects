@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PageTitle</title>
+    <title>Popup Message</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,30 @@
   </head>
 
   <body>
+    <div class="container">
+      <div class="output hide">
+        <div class="message">
+          <h3>Popup Message</h3>
+          <p>
+            Infinity and Beyond Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Dolor accusamus quae, iure sunt molestiae ducimus
+            asperiores commodi laborum doloribus eveniet!
+          </p>
+        </div>
+        <h2 class="close">X</h2>
+      </div>
+      <div class="content">
+        <div class="popup btn btn-overview" data-message="Real Projects!">
+          Overview
+        </div>
+        <div class="popup btn btn-notes" data-message="JavaScript Games">
+          Notes
+        </div>
+        <div class="popup btn btn-reviews" data-message="AJAX JS Project">
+          Reviews
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
