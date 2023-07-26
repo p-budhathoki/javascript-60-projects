@@ -54,9 +54,63 @@ img {
 }
 
 .container {
-    max-width: 90rem;
-    margin: 0 auto;
-    padding: 0 2rem;
+    /* max-width: 90rem; */
+    /* margin: 0 auto;
+    padding: 0 2rem; */
 }
 
 /* ======================================================================= */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* display: block; */
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    /* padding: 0; */
+    /* margin: 1rem auto; */
+}
+
+.output {
+    background: dodgerblue;
+    height: 50rem;
+    width: 50rem;
+    border: 1px solid green;
+    overflow: hidden;
+    cursor: grab;
+}
+
+h2 {
+    display: inline-block;
+}
+
+.message {
+    background: gold;
+    font-size: 1.6rem;
+    color: #000;
+    width: 50rem;
+    /* text-align: center; */
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1rem 0 0.5rem 1.5rem;
+}
+
+span {
+    /* border: 1px solid #000; */
+    /* padding: 1rem; */
+    font-size: 2.5rem;
+    padding-left: .5rem;
+    margin-right: 2rem;
+    /* margin-left: 2rem; */
+}
+
+.box {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1.5rem;
+    border: 1px solid #000;
+}
