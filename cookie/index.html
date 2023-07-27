@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PageTitle</title>
+    <title>Cookie</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,31 @@
   </head>
 
   <body>
+    <div class="container">
+      <div class="main-block">
+        <h1>Cookie</h1>
+        <hr />
+        <label for="cookieName">Cookie Name : </label>
+        <input type="text" name="cookieName" id="name" value="testName" />
+
+        <label for="cookieValue">Cookie Value :</label>
+        <input type="text" name="cookieValue" id="Value" value="testValue" />
+
+        <label for="cookieExpire">Cookie Expire :</label>
+        <input type="date" name="cookieExpire" id="date" />
+        <hr>
+        <div class="btn-block">
+          <button type="submit" class="btn1">Set Cookie</button>
+          <button type="submit" class="btn2">Get Cookie</button>
+          <button type="submit" class="btn3">Delete Cookie</button>
+          <button type="submit" class="btn4">All Cookie</button>
+        </div>
+        <hr>
+        <div class="output"></div>
+      </div>
+    
+      
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
