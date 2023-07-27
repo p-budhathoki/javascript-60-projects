@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PageTitle</title>
+    <title>DOM Interaction</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,35 @@
   </head>
 
   <body>
+    <div class="container">
+      <label for="addElement">Add Element : </label>
+      <select name="addElement"></select>
+      <button type="submit" class="adder">Add</button>
+      <hr>
+      <label for="eleMaker">Element Maker : </label>
+      <select name="eleMaker"></select>
+      <hr>
+      <div class="main">Infinity and Beyond</div>
+      <input type="text" name="outputText" value="Bill" />
+      <button type="submit" class="btn">Submit</button>
+      <hr />
+      <label for="bgColor">Background : </label>
+      <input type="color" name="bgColor" value="#ffffff" />
+      <hr />
+      <label for="textColor">Text Color : </label>
+      <input type="color" name="textColor" value="#000000" />
+      <hr />
+      <label for="tglClasses">Toggle Classes : </label>
+      <select name="tglClasses"></select>
+      <hr />
+      
+
+      <div class="sec-content">
+        <div>New Div</div>
+        <p>Another Div</p>
+        <span>JavaScript</span>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
