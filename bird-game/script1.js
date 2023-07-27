@@ -1,11 +1,9 @@
 const score = document.querySelector(".score");
 const startScreen = document.querySelector(".startScreen");
-const startButton = document.querySelector(".btn");
 const gameArea = document.querySelector(".gameArea");
 const gameMessage = document.querySelector(".gameMessage");
-
 gameMessage.addEventListener("click", start);
-startButton.addEventListener("click", start);
+startScreen.addEventListener("click", start);
 document.addEventListener("keydown", pressOn);
 document.addEventListener("keyup", pressOff);
 let keys = {};
@@ -14,12 +12,10 @@ let player = {};
 function start() {
   player.speed = 2;
   player.score = 0;
-  player.inPlay = true;
+  player.inplay = true;
   gameArea.innerHTML = "";
-  //   console.log("start");
-  startScreen.classList.add("hide");
   gameMessage.classList.add("hide");
-
+  startScreen.classList.add("hide");
   let bird = document.createElement("div");
   bird.setAttribute("class", "bird");
   let wing = document.createElement("span");
@@ -28,18 +24,15 @@ function start() {
   wing.style.top = wing.pos + "px";
   bird.appendChild(wing);
   gameArea.appendChild(bird);
-
   player.x = bird.offsetLeft;
   player.y = bird.offsetTop;
-
   player.pipe = 0;
-  let spacing = 300;
+  let spacing = 500;
   let howMany = Math.floor(gameArea.offsetWidth / spacing);
-  //   console.log(howMany);
-  for (let i = 0; i < howMany; i++) {
+  ///console.log(howMany);
+  for (let x = 0; x < howMany; x++) {
     buildPipes(player.pipe * spacing);
   }
-
   window.requestAnimationFrame(playGame);
 }
 
@@ -47,7 +40,7 @@ function buildPipes(startPos) {
   let totalHeight = gameArea.offsetHeight;
   let totalWidth = gameArea.offsetWidth;
   player.pipe++;
-  let pipeColor = randomColor();
+  let pipeColor = clr();
   let pipe1 = document.createElement("div");
   pipe1.start = startPos + totalWidth;
   pipe1.classList.add("pipe");
@@ -60,7 +53,6 @@ function buildPipes(startPos) {
   pipe1.id = player.pipe;
   pipe1.style.backgroundColor = pipeColor;
   gameArea.appendChild(pipe1);
-
   let pipeSpace = Math.floor(Math.random() * 250) + 150;
   let pipe2 = document.createElement("div");
   pipe2.start = pipe1.start;
@@ -75,16 +67,14 @@ function buildPipes(startPos) {
   gameArea.appendChild(pipe2);
 }
 
-function randomColor() {
-  return "#" + Math.random().toString(16).substring(2, 8);
+function clr() {
+  return "#" + Math.random().toString(16).substr(-6);
 }
 
 function movePipes(bird) {
   let lines = document.querySelectorAll(".pipe");
-  let counter = 0;
-
-  lines.forEach((item) => {
-    // console.log(item);
+  let counter = 0; //counts pips to remove
+  lines.forEach(function (item) {
     item.x -= player.speed;
     item.style.left = item.x + "px";
     if (item.x < 0) {
@@ -92,11 +82,11 @@ function movePipes(bird) {
       counter++;
     }
     if (isCollide(item, bird)) {
-      console.log("crash");
+      playGameOver(bird);
     }
   });
   counter = counter / 2;
-  for (let i = 0; i < counter; i++) {
+  for (let x = 0; x < counter; x++) {
     buildPipes(0);
   }
 }
@@ -104,9 +94,8 @@ function movePipes(bird) {
 function isCollide(a, b) {
   let aRect = a.getBoundingClientRect();
   let bRect = b.getBoundingClientRect();
-
-  return (
-    !(aRect.bottom < bRect.top) ||
+  return !(
+    aRect.bottom < bRect.top ||
     aRect.top > bRect.bottom ||
     aRect.right < bRect.left ||
     aRect.left > bRect.right
@@ -114,69 +103,62 @@ function isCollide(a, b) {
 }
 
 function playGame() {
-  if (player.inPlay) {
-    // console.log(player)
-    // console.log("play")
+  if (player.inplay) {
     let bird = document.querySelector(".bird");
     let wing = document.querySelector(".wing");
     movePipes(bird);
     let move = false;
-
-    if (keys.ArrowLeft && player.x > 50) {
+    if (keys.ArrowLeft && player.x > 0) {
       player.x -= player.speed;
       move = true;
     }
-    if (keys.ArrowRight && player.x < gameArea.offsetWidth) {
+    if (keys.ArrowRight && player.x < gameArea.offsetWidth - 50) {
       player.x += player.speed;
       move = true;
     }
-    if ((keys.ArrowUp || keys.Space) && player.y > 50) {
+    if ((keys.ArrowUp || keys.Space) && player.y > 0) {
       player.y -= player.speed * 5;
       move = true;
     }
-    if (keys.ArrowDown && player.y < gameArea.offsetHeight) {
+    if (keys.ArrowDown && player.y < gameArea.offsetHeight - 50) {
       player.y += player.speed;
       move = true;
     }
-
     if (move) {
       wing.pos = wing.pos == 15 ? 25 : 15;
       wing.style.top = wing.pos + "px";
     }
-
-    player.y += player.speed * 2; // gravity
-
+    player.y += player.speed * 2;
     if (player.y > gameArea.offsetHeight) {
-      console.log("game over");
       playGameOver(bird);
     }
     bird.style.top = player.y + "px";
     bird.style.left = player.x + "px";
-
     window.requestAnimationFrame(playGame);
     player.score++;
-    score.innerHTML = "Score : " + player.score;
+    score.innerText = "Score:" + player.score;
   }
 }
+
 function playGameOver(bird) {
-  player.inPlay = false;
+  player.inplay = false;
   gameMessage.classList.remove("hide");
-  //   bird.style.transform = "rotate(180deg)";
   bird.setAttribute("style", "transform:rotate(180deg)");
   gameMessage.innerHTML =
-    "Game Over! <br> You Scored " +
-    player.score +
-    "<br>Click Start to play again";
-  startScreen.classList.remove("hide");
+    "Game Over<br>You scored " + player.score + "<br>Click here to start again";
+}
+
+function randColor() {
+  return "#" + Math.random().toString(16).substr(-6);
 }
 
 function pressOn(e) {
   e.preventDefault();
   keys[e.code] = true;
-  console.log(keys);
+  ///console.log(keys);
 }
+
 function pressOff(e) {
   e.preventDefault();
   keys[e.code] = false;
-  console.log(keys);
 }
