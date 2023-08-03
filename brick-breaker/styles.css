@@ -60,3 +60,100 @@ img {
 }
 
 /* ======================================================================= */
+.container {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    background: rgba(255, 255, 255, .7);
+    margin: 1rem auto;
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #000;
+    border-radius: 10rem;
+}
+
+h2 {
+    margin-left: 2rem;
+}
+
+.score, .lives {
+    /* border: 1px solid #000; */
+    /* padding: .5rem 1rem; */
+    padding-left: 0;
+    font-size: 3rem;
+}
+
+.game-area {
+    position: relative;
+    height: 40rem;
+    border: 1px solid green;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.brick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9.1rem;
+    height: 4rem;
+    padding: 0.1rem;
+    color: #000;
+    border: 1px solid whitesmoke;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.game-btn {
+    background: lightsalmon;
+    border: 1px solid blue;
+    width: 50%;
+    height: 15rem;
+    /* margin: auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    font-size: 4rem;
+    color: #000;
+    text-align: center;
+    line-height: 14rem;
+    /* vertical-align: middle; */
+    cursor: pointer;
+}
+
+.ball {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: #000;
+    border-radius: 2.5rem;
+    background-image: url(./ball.png);
+    background-size: cover;
+    left: 50%;
+    bottom: 3.2rem;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.paddle {
+    position: absolute;
+    background: #ddd;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 2.5rem;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
