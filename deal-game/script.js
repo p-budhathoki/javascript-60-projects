@@ -95,7 +95,7 @@ const app = (function () {
     }
   }
 
-  function popUp2() {
+  function popUp2(message) {
     console.log(message);
     page.modal2.style.display = "block";
     page.modalBody2.innerHTML = message;
@@ -128,7 +128,7 @@ const app = (function () {
   }
 
   function buildGameBoard() {
-    sideVals = [];
+    let sideVal = [];
     const val2 = vals.slice(0);
     page.container.innerHTML = "";
     game.holdingArray = [];
@@ -143,21 +143,21 @@ const app = (function () {
     let leftHor = tempSide.width / 3;
 
     for (let i = 0; i < vals.length; i++) {
-      sideVals[i] = document.createElement("div");
-      sideVals[i].classList.add("sideVal");
-      sideVals[i].textContent = vals[i];
+      sideVal[i] = document.createElement("div");
+      sideVal[i].classList.add("sideVal");
+      sideVal[i].textContent = vals[i];
 
       if ((i = Math.round(vals.length / 2))) {
         sideTop = 40;
         leftHor = tempSide.left + tempSide.width / 3;
       }
-      //   sideVals[i].style.left = leftHor + "px";
-      //   sideVals[i].style.top = sideTop + "px";
+      sideVal[i].style.left = leftHor + "px";
+      sideVal[i].style.top = sideTop + "px";
       sideTop += 45;
       if (i < vals.length / 2) {
-        page.leftSide.appendChild(sideVals[i]);
+        page.leftSide.appendChild(sideVal[i]);
       } else {
-        // page.rightSide.appendChild(sideVals[i]);
+        page.rightSide.appendChild(sideVal[i]);
       }
 
       let maker = document.createElement("div");
@@ -199,8 +199,8 @@ const app = (function () {
             `Selected #${e.target.ind} <br>Now Select ${tempCaseNext} cases`
           );
         } else {
-          console.log(sideVals);
-          sideVals[ind2].classList.add("muted");
+          console.log(sideVal);
+          sideVal[ind2].classList.add("muted");
           if (ind != -1) {
             game.holdingArray.splice(ind, 1);
           }
