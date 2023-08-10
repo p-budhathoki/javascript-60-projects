@@ -1,15 +1,12 @@
-// const url =
-//   "https://script.google.com/macros/s/AKfycbxFlQXkvna9jYamLWhTQ1k3cJItWZDvCYoCmLTcN-CJcr7vZw/exec";
 const url =
   "https://script.google.com/macros/s/AKfycbxFlQXkvna9jYamLWhTQ1k3cJItWZDvCYoCmLTcN-CJcr7vZw/exec";
 const val = { page: 15 };
-
 const page = {};
 page.loaderMore = true;
 page.message = document.createElement("div");
-page.message.textContent = "---Scroll to Load More Content...---";
+page.message.textContent = "---Scroll to load more content---";
 page.container = document.createElement("div");
-page.container.textContent = "Infinity and Beyond";
+page.container.textContent = "hello world";
 page.main = document.querySelector("section");
 page.main.append(page.container);
 page.main.append(page.message);
@@ -19,11 +16,9 @@ function firstLoad() {
   page.container.innerHTML = "";
   getCourses();
 }
-
 function getCourses() {
   const baseURL = url + "?p=" + val.page;
-  page.message.textContent = "Loading...";
-
+  page.message.textContent = "loading....";
   fetch(baseURL)
     .then((rep) => rep.json())
     .then((json) => {
@@ -40,14 +35,14 @@ function getCourses() {
     });
 }
 
-window.onscroll = function (e) {
-  //   console.log(e);
-  //   console.log(window.innerHeight);
-  //   console.log(window.scrollY);
-  //   console.log(document.body.offsetHeight);
-
+window.onscroll = function (ev) {
+  /*  console.log(ev);
+  console.log(window.innerHeight);
+  console.log(window.scrollY);
+  console.log(page.main.offsetHeight);
+  console.log(document.body.offsetHeight);*/
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 300) {
-    console.log("Scrolling");
+    //console.log('SCROLLING');
     if (page.loaderMore) {
       page.loaderMore = false;
       addNewPosts();
@@ -61,7 +56,7 @@ function addNewPosts() {
 }
 
 function renderPost(data) {
-  data.forEach((post)=> {
+  data.forEach(function (post) {
     const div = document.createElement("div");
     div.innerHTML = `${post[8]}`;
     page.container.append(div);

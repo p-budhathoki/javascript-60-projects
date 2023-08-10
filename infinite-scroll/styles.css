@@ -60,3 +60,31 @@ img {
 }
 
 /* ======================================================================= */
+header {
+    height: 30rem;
+    background: rgba(255, 255, 255, .3);
+    text-align: center;
+    padding-top: 4rem;
+    font-size: 3rem;
+}
+
+footer {
+    height: 30rem;
+    background: #000;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 4rem;
+    font-size: 3rem;
+
+}
+
+section {
+    min-height: 50rem;
+    font-size: 2rem;
+    padding: 4rem;
+
+}
+
+.section-container {
+    background: rgba(255, 255, 255, .5);
+}
