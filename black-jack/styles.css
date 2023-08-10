@@ -60,3 +60,95 @@ img {
 }
 
 /* ======================================================================= */
+.score-board {
+    background: rgba(255, 255, 255, 0.5);
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    font-size: 2.5rem;
+
+}
+
+.score {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, .2);
+    display: block;
+    margin: 1.5rem 0;
+}
+
+.message {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, .5);
+    padding: 2rem;
+}
+.red{
+    color: red;
+}
+.big{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.tiny{
+    font-size: 1.2rem;
+}
+
+.card {
+    font-size: 2rem;
+    padding: 2rem;
+    display: inline-block;
+    margin: auto;
+    height: 17rem;
+    width: 12rem;
+    background-color: whitesmoke;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: .5rem 1rem  #333;
+    margin: 0.5rem;
+}
+.cardB {
+    position: absolute;
+    top: 1.13rem;
+    left: 0.9rem;
+    font-size: 2rem;
+    padding: 2rem;
+    display: inline-block;
+    margin: auto;
+    height: 17rem;
+    width: 12rem;
+    background-color: blue;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: .5rem 1rem  #333;
+    margin: 0.5rem;
+}
+
+button {
+    /* width: 100%; */
+    /* display: flex; */
+    width: 20%;
+    padding: 1rem 0;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: #1c87c9;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+button:hover {
+    background: #26a9e0;
+
+}
+
+input {
+    /* width: calc(100%-6rem); */
+    /* height: 4rem; */
+    margin: 1.3rem 0rem 0rem -0.5rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+    border-radius: 0rem .5rem .5rem 0;
+    border: 1px solid #cbc9c9;
+    background: whitesmoke;
+    font-size: 1.6rem;
+    /* border: 1px solid red; */
+    /* margin-top: 1rem; */
+}
