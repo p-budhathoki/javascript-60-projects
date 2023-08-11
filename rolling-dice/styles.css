@@ -60,3 +60,63 @@ img {
 }
 
 /* ======================================================================= */
+button {
+    /* width: 100%; */
+    width: 20%;
+    padding: 1rem 0;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    border: none;
+    background: #1c87c9;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button:hover {
+    background: #26a9e0;
+
+}
+
+.container-area {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* border: 1px solid red; */
+    /* display: inline-block; */
+    margin: 7rem 1rem;
+}
+
+.area1, .area2 {
+    /* width: 40%; */
+    width: 40rem;
+    height: 37rem;
+    /* height: 46vh; */
+    display: inline-block;
+    padding: 20rem;
+    /* background: blue; */
+    border-radius: 5rem;
+    margin-left: 5rem;
+}
+
+.area1>div, .area2>div {
+    margin-left: 1.5rem;
+}
+
+span {
+    width: 9rem;
+    display: inline-block;
+    /* display: flex;
+    flex-direction: row wrap; */
+    height: 9rem;
+    border-radius: 50%;
+    /* background: #333; */
+    /* background: #000; */
+    /* margin: 0.2rem; */
+    margin: 1rem;
+    /* margin-left: 2rem; */
+
+}
