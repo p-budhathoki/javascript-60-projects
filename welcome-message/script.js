@@ -5,10 +5,10 @@ const btn = document.querySelector("button");
 output.setAttribute("class", "hide");
 
 btn.onclick = () => {
-//   userVal.value = "";
-if (userVal.value.length > 3) {
-      output.borderColor = "white";
-      const message = `Welcome to the site ${userVal.value}`;
+  //   userVal.value = "";
+  if (userVal.value.length > 3) {
+    // output.borderColor = "white";
+    const message = `Welcome to the site ${userVal.value}`;
     output.classList.remove("hide");
     output.classList.add("output");
     output.textContent = message;
