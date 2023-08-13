@@ -60,3 +60,10 @@ img {
 }
 
 /* ======================================================================= */
+.output {
+    font-size: 2rem;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    margin: 2rem auto;
+cursor: pointer;
+}
