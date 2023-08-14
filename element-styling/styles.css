@@ -60,3 +60,75 @@ img {
 }
 
 /* ======================================================================= */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    color: #666;
+}
+
+.hide {
+    display: none;
+}
+
+
+hr {
+    color: #a9a9a9;
+    opacity: 0.3;
+}
+
+div {
+    display: inline-block;
+}
+
+
+
+input {
+    /* width: calc(100%-6rem); */
+    /* height: 4rem; */
+    width: 20%;
+    margin: 1.3rem 0rem 0rem -0.5rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+    border-radius: 0rem .5rem .5rem 0;
+    border: 1px solid #cbc9c9;
+    background: whitesmoke;
+    font-size: 1.6rem;
+    /* border: 1px solid red; */
+    /* margin-top: 1rem; */
+    display: inline-block;
+}
+
+
+
+
+button {
+    /* width: 100%; */
+    display: inline-block;
+    /* width: 20%; */
+    padding: 1rem 3rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    border: none;
+    background: #1c87c9;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 2rem;
+    /* margin-top: rem; */
+}
+
+button:hover {
+    background: #26a9e0;
+
+}
+
+span {
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    border: 1px solid red;
+}
