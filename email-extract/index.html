@@ -18,6 +18,29 @@
   </head>
 
   <body>
+    <div class="container">
+      <span class="counter hide"></span>
+      <textarea
+        name="txtarea"
+        id=""
+        autofocus
+        placeholder="Enter text to process"></textarea>
+      <label for="txtContent">Email Separator</label>
+      <select name="" id="sep">
+        <option value=",">,</option>
+        <option value="-">-</option>
+        <option value=" ">space</option>
+        <option value=";">;</option>
+      </select>
+      <button type="button" class="btn">Get Emails</button>
+      <textarea
+      name="output"
+      id="txtContent"
+      autofocus
+      placeholder="Result of email extraction"></textarea>
+      <button type="button" class="btn btn-download">Download</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
