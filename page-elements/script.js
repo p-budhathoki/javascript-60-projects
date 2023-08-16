@@ -84,3 +84,4 @@ let a1 = adder(10);
 for (let i = 0; i < 10; i++) { 
     output3.innerHTML += `<div>Output : ${a1(2+i)}</div>`;
 }
+

@@ -1,0 +1,21 @@
+{
+  "name": "Laurence Svekis",
+  "age": 41,
+  "address": {
+    "street": "10 Main Street",
+    "city": "New York",
+    "state": "NY",
+    "zip": 10001
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 123-1234"
+    },
+
+    {
+      "type": "work",
+      "number": "985 578-4587"
+    }
+  ]
+}
