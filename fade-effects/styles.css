@@ -60,3 +60,31 @@ img {
 }
 
 /* ======================================================================= */
+body{
+    font-size: 2rem;
+
+}
+
+div{
+    border: 1px solid #ddd;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+button {
+    /* width: 100%; */
+    width: 20%;
+    padding: 1rem 0;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    border: none;
+    background: #1c87c9;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+button:hover {
+    background: #26a9e0;
+
+}
