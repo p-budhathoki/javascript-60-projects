@@ -84,3 +84,22 @@ const credits = ((num) => {
 credits(); // 2
 credits(); // 1
 credits(); // 0
+
+console.log("===================================");
+
+const val1 = 10;
+function outerFun(x) {
+  const val2 = 10;
+  // inner function
+  function innerFun() {
+    return x + val2 + val1;
+  }
+  return innerFun;
+}
+
+const val3 = outerFun(15);
+console.log("val3 : " + val3());
+
+for (let i = 0; i < 10; i++) {
+  console.log(outerFun(i + 2)());
+}
