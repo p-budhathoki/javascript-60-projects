@@ -1,0 +1,24 @@
+[{
+    "name":{
+        "first":"Lisa",
+        "last":"Suekis"
+    } ,
+    "age":30,
+    "location":{
+        "city": "New York",
+        "country": "USA",
+    }
+
+},
+{
+    "name":{
+        "first":"Johyn",
+        "last":"Sekis"
+    } ,
+    "age":50,
+    "location":{
+        "city": "Sydney",
+        "country": "AUS",
+    }
+
+}]
