@@ -98,8 +98,32 @@ function outerFun(x) {
 }
 
 const val3 = outerFun(15);
-console.log("val3 : " + val3());
+console.log("val3 : " + val3())
 
 for (let i = 0; i < 10; i++) {
   console.log(outerFun(i + 2)());
 }
+
+console.log("===================================");
+
+const a = "infinity";
+console.log(a)
+abc();
+
+function abc() {
+  const a = "beyond-infinity";
+  console.log(a)
+}
+
+function myCount() {
+  let count = 0;
+  return function () {
+    return count++;
+  }
+}
+
+let cnt = myCount();
+// console.log(cnt)
+for (let i = 0; i < 10; i++) {
+  console.log(cnt())
+ }
